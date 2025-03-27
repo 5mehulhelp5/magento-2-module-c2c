@@ -1,0 +1,6 @@
+<?php
+if (/* @escapeNotVerified */ $block->isHeaderButtonEnabled()): ?>
+    <div class="c2c-button top-header <?= $escaper->escapeHtml($block->getHeaderButtonPosition()); ?>">
+        <?= $escaper->escapeHtml($block->getHeaderButtonText()); ?>
+    </div>
+<?php endif; ?>

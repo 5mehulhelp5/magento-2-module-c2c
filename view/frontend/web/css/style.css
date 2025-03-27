@@ -1,0 +1,50 @@
+.custom-icon-tooltip {
+    margin-top: 0px !important;
+}
+.c2c-button {
+    display: block;
+}
+.c2c-button.header.left, .c2c-button.footer.left, .c2c-button.image-left-up, .c2c-button.image-left-down, .c2c-button.short-desc-left-down, .c2c-button.short-desc-left-up, .c2c-button.description-left-up,.c2c-button.description-left-down{
+    /*float: left;*/
+}
+.c2c-button.top-header.right, .c2c-button.footer.right, .c2c-button.image-right-up, .c2c-button.image-right-down, .c2c-button.short-desc-right-up, .c2c-button.short-desc-right-up, .c2c-button.description-right-up, .c2c-button.description-right-down{
+    float: right;
+}
+.c2c-button.top-header.right {
+    margin: 5px 0 0 15px
+}
+.c2c-button.c2c_add_to_cart_down  {
+    /* margin: -30px 0 10px 0; */
+}
+.c2c-button.c2c_add_to_cart_up {
+    /* margin: -25px 0 0 0; */
+}
+.c2c-button.image-right-down {
+    text-align: right;
+    width: 100%;
+}
+.c2c-button.image-right-left {
+    text-align: left;
+    width: 100%;
+}
+.c2c-button.cart-center-down {
+    width: 100%;
+    text-align: center;
+}
+.c2c-button.cart-center-up {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.c2c-button.cart-center-up, .c2c-button.cart-left-up, .c2c-button.cart-right-up {
+    /* margin-top: -20px; */
+    padding: 0 0 15px 0;
+}
+.c2c-button.cart-right-up, .c2c-button.cart-right-down {
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+.c2c-button.footer.right {
+    margin: 0 10px 0 0;
+}

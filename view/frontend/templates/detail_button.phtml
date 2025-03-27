@@ -1,0 +1,103 @@
+<?php
+//@codingStandardsIgnoreStart
+$blockName =$block->getNameInLayout();
+$position = $block->getButtonPositionForProduct();
+$isDisplay = $block->isDisplayOnDetailPageProduct();
+$c2cScript = $block->getC2CScript();
+
+if (empty($position)) {
+    $position = $block->getButtonPositionsOnDetailPage();
+}
+
+if (empty($isDisplay)) {
+    $isDisplay = $block->isDisplayOnDetailPageConfig();
+}
+
+if (!empty($position) && !empty($c2cScript) && !empty($isDisplay)) {
+
+    if (in_array($blockName, $position)) { ?>
+        <div class="c2c-button <?= $escaper->escapeHtml($blockName)?> "><?= $c2cScript ?></div>
+        <?php
+    }
+
+    if ($blockName == 'c2c_product_image_up') {
+        $imageupclass = '';
+        if (in_array('c2c_product_image_right_up', $position)) {
+            $imageupclass = 'image-right-up';
+        } elseif (in_array('c2c_product_image_left_up', $position)) {
+            $imageupclass = 'image-left-up';
+        }
+        if ($imageupclass) { ?>
+            <div class="c2c-button <?= /* @noEscape */ $imageupclass ?>"><?= $c2cScript ?></div>
+            <?php
+        }
+    }
+
+    if ($blockName == 'c2c_product_image_down') {
+        $imagedownclass = '';
+        if (in_array('c2c_product_image_right_down', $position)) {
+            $imagedownclass = 'mage-right-down';
+        } elseif (in_array('c2c_product_image_left_down', $position)) {
+            $imagedownclass = 'image-left-down';
+        }
+        if ($imagedownclass) { ?>
+            <div class="c2c-button <?= $imagedownclass ?>"><?= $c2cScript ?></div>
+            <?php
+        }
+    }
+
+    if ($blockName == 'c2c_short_desc_up') {
+        $shortDesUpClass = '';
+        if (in_array('c2c_short_desc_right_up', $position)) {
+            $shortDesUpClass = 'short-desc-right-up';
+        } elseif (in_array('c2c_short_desc_up_left_up', $position)) {
+            $shortDesUpClass = 'short-desc-left-up';
+        }
+        if ($shortDesUpClass) { ?>
+            <div class="c2c-button <?= $shortDesUpClass ?>"><?= $c2cScript ?></div>
+            <?php
+        }
+    }
+
+    if ($blockName == 'c2c_short_desc_down') {
+        $shortDesDnClass = '';
+        if (in_array('c2c_short_desc_right_down', $position)) {
+            $shortDesDnClass = 'short-desc-right-down';
+        } elseif (in_array('c2c_short_desc_left_down', $position)) {
+            $shortDesDnClass = 'short-desc-left-down';
+        }
+        if ($shortDesDnClass) { ?>
+            <div class="c2c-button <?= $shortDesDnClass ?>"><?= $c2cScript ?></div>
+            <?php
+        }
+    }
+
+    if ($blockName == 'c2c_description_up') {
+        $desUpClass = '';
+        if (in_array('c2c_description_right_up', $position)) {
+            $desUpClass = 'description-right-up';
+        } elseif (in_array('c2c_description_up_left_up', $position)) {
+            $desUpClass = 'description-left-up';
+        }
+        if ($desUpClass) { ?>
+            <div class="c2c-button <?= $desUpClass ?>"><?= $c2cScript ?></div>
+            <?php
+        }
+    }
+
+    if ($blockName == 'c2c_description_down') {
+        $desDnClass = '';
+        if (in_array('c2c_description_left_up', $position)) {
+            $desDnClass = 'description-right-down';
+        } elseif (in_array('c2c_description_left_down', $position)) {
+            $desDnClass = 'description-left-down';
+        }
+        if ($desDnClass) { ?>
+            <div class="c2c-button <?= $desDnClass ?>"><?= $c2cScript ?></div>
+            <?php
+        }
+    }
+}
+//@codingStandardsIgnoreEnd
+?>
+

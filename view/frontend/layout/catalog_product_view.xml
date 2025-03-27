@@ -1,0 +1,41 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <body>
+        <referenceContainer name="page.main.title">
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_title_up" template="ContextToCall_C2C::detail_button.phtml" before="-"/>
+        </referenceContainer>
+
+        <referenceContainer name="page.main.title">
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_title_down" template="ContextToCall_C2C::detail_button.phtml" after="-"/>
+        </referenceContainer>
+
+        <move element="c2c_title_up" destination="product.info.main" before="page.main.title"/>
+        <move element="c2c_title_down" destination="product.info.main" after="page.main.title"/>
+        <move element="page.main.title" destination="product.info.main" before="-" />
+
+        <referenceContainer name="product.info.price">
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_price_up" template="ContextToCall_C2C::detail_button.phtml" before='product.price.final'/>
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_price_down" template="ContextToCall_C2C::detail_button.phtml" after='product.price.final'/>
+        </referenceContainer>
+         <referenceContainer name="product.info.form.content">
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_add_to_cart_up" template="ContextToCall_C2C::detail_button.phtml" before='addtocart'/>
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_add_to_cart_down" template="ContextToCall_C2C::detail_button.phtml" after='addtocart'/>
+        </referenceContainer>
+
+        <referenceContainer name="product.info.media">
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_product_image_up" template="ContextToCall_C2C::detail_button.phtml" before='-'/>
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_product_image_down" template="ContextToCall_C2C::detail_button.phtml" after='-'/>
+        </referenceContainer>
+
+        <referenceContainer name="product.info.main">
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_short_desc_up" template="ContextToCall_C2C::detail_button.phtml" before='product.info.overview'/>
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_short_desc_down" template="ContextToCall_C2C::detail_button.phtml" after='product.info.overview'/>
+        </referenceContainer>
+
+        <referenceBlock name="content">
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_description_up" template="ContextToCall_C2C::detail_button.phtml" before='product.info.details'/>
+            <block class="ContextToCall\C2C\Block\ProductButton" name="c2c_description_down" template="ContextToCall_C2C::detail_button.phtml" after='product.info.details'/>
+        </referenceBlock>
+    </body>
+</page>
+
+
