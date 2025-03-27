@@ -1,0 +1,6 @@
+<?php
+if (/* @escapeNotVerified */ $block->isFooterButtonEnabled()): ?>
+    <div class="c2c-button footer <?= $escaper->escapeHtml($block->getFooterButtonPosition()); ?>">
+        <?= $escaper->escapeHtml($block->getFooterButtonText()); ?>
+    </div>
+<?php endif; ?>

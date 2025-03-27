@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+
+        <tab id="contexttocall_c2c_tab" translate="label" sortOrder="200">
+            <label>ContextToCall C2C-B</label>
+        </tab>
+
+        <section id="contexttocall_c2c" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+            <label>C2C Configuration</label>
+            <tab>contexttocall_c2c_tab</tab>
+            <resource>ContextToCall_C2C::config</resource>
+ 
+            <group id="global_settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                <label>Global Settings</label>
+
+                <field id="enable_header_button" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Enable Header Button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="header_script" translate="label" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Header Script</label>
+                </field>
+
+                <field id="header_button_position" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Header Position</label>
+                    <source_model>ContextToCall\C2C\Model\Config\Source\GlobalPosition</source_model>
+                </field>
+
+                <field id="enable_footer_button" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Enable Footer Button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                
+                <field id="footer_script" translate="label" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Footer Script</label>
+                </field>
+
+                <field id="footer_button_position" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Footer Position</label>
+                    <source_model>ContextToCall\C2C\Model\Config\Source\GlobalPosition</source_model>
+                </field>
+            </group>
+
+
+             <!-- Group for C2C Product Settings -->
+            <group id="c2c_product_settings" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product Settings</label>
+
+                <field id="c2c_display_on_detail_page" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Display on Detail Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="c2c_display_on_list_page" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Display on List Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="c2c_button_position_detail_page" translate="label" type="multiselect" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Button Position on Detail Page</label>
+                    <source_model>ContextToCall\C2C\Model\Config\Source\DetailButtonPosition</source_model>
+                </field>
+
+                <field id="c2c_button_position_list" translate="label" type="multiselect" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Button Position on List Page</label>
+                    <source_model>ContextToCall\C2C\Model\Config\Source\ListButtonPosition</source_model>
+                </field>
+            </group>
+
+            <group id="c2c_design" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Design Settings</label>
+                <field id="custom_css" translate="label" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom CSS</label>
+                    <frontend_class>textarea</frontend_class>
+                </field>
+            </group>
+
+        </section>
+    </system>
+</config>

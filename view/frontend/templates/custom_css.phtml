@@ -1,0 +1,8 @@
+<?php
+$helper = $block->helper(\ContextToCall\C2C\Helper\Config::class);
+$customCss = $helper->getCustomCss();
+if ($customCss): ?>
+<style>
+    <?= /* Escaping CSS */ $escaper->escapeHtml($customCss, ['style']) ?>
+</style>
+<?php endif; ?>

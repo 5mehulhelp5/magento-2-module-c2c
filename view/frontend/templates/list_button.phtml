@@ -1,0 +1,75 @@
+<?php
+//@codingStandardsIgnoreStart
+$blockType =  $block->getData('type');
+$position = $block->getListButtonPositions();
+$c2cScript = $block->getC2CScript();
+$isDisplay = $block->isDisplayOnListPageProduct();
+
+if (empty($position)) {
+    $position = $block->getGloabalListButtonPositions();
+}
+
+if (empty($isDisplay)) {
+    $isDisplay = $block->isDisplayOnListPageConfig();
+}
+
+if (!empty($position) && !empty($c2cScript) && !empty($isDisplay)) {
+    if ($blockType == 'image_up') {
+        $imageupclass = '';
+        if (in_array('product_image_left_up', $position)) {
+            $imageupclass = 'image-left-up';
+        } elseif (in_array('product_image_right_up', $position)) {
+            $imageupclass = 'image-right-up';
+        }
+        if ($imageupclass) { ?>
+
+           <div class="c2c-button <?= $imageupclass ?>"><?= $c2cScript ?></div> 
+
+    <?php }
+
+    } elseif ($blockType == 'image_down') {
+        
+        $imagedownclass = '';
+        if (in_array('product_image_left_down', $position)) {
+            $imagedownclass = 'image-left-up';
+        } elseif (in_array('product_image_right_down', $position)) {
+            $imagedownclass = 'image-right-down';
+        }
+        if ($imagedownclass) { ?>
+
+        <div class="c2c-button <?= $imagedownclass ?>"><?= $c2cScript ?></div> 
+
+        <?php }
+    }
+
+    if ($blockType == 'cart_up') {
+        $cartupclass = '';
+        if (in_array('add_to_cart_up_left', $position)) {
+            $cartupclass = 'cart-left-up';
+        } elseif (in_array('add_to_cart_up_right', $position)) {
+            $cartupclass = 'cart-right-up';
+        } elseif (in_array('add_to_cart_up_center', $position)) {
+            $cartupclass = 'cart-center-up';
+        }
+        if ($cartupclass) { ?>
+           <div class="c2c-button <?= $cartupclass ?>"><?= $c2cScript ?></div> 
+
+    <?php }
+    } elseif ($blockType == 'cart_down') {
+
+        $cartdownclass = '';
+        if (in_array('add_to_cart_down_left', $position)) {
+            $cartdownclass = 'cart-left-down';
+        } elseif (in_array('add_to_cart_down_right', $position)) {
+            $cartdownclass = 'cart-right-down';
+        } elseif (in_array('add_to_cart_down_center', $position)) {
+            $cartdownclass = 'cart-center-down';
+        }
+        if ($cartdownclass) { ?>
+        <div class="c2c-button <?= $cartdownclass ?>"><?= $c2cScript ?></div> 
+        <?php }
+
+    }
+}
+//@codingStandardsIgnoreEnd
+?>

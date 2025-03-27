@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.panel">
+            <block class="ContextToCall\C2C\Block\GlobalButton"
+                   name="c2c.header.button"
+                   template="ContextToCall_C2C::c2c_header_button.phtml" before='-'/>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block class="ContextToCall\C2C\Block\GlobalButton"
+                   name="c2c.footer.button"
+                   template="ContextToCall_C2C::c2c_footer_button.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="after.body.start">
+            <block class="Magento\Framework\View\Element\Template" name="c2c_custom_css" 
+            template="ContextToCall_C2C::custom_css.phtml" />
+        </referenceContainer>
+    </body>
+</page>

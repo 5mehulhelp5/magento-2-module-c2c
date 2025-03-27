@@ -1,0 +1,28 @@
+{
+    "name": "contexttocall/magento-2-module-c2c",
+    "description": "Context To Call",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0"
+    ],
+    "require": {
+        "php": "~7.2||~8.1||~8.2"
+    },
+    "version": "1.1.1",
+    "authors": [
+        {
+        "name": "Contexttocall",
+        "email": "product.config@contexttocall.com",
+        "homepage": "https://contexttocall.com/",
+        "role": "Owner"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "ContextToCall\\C2C\\": ""
+        }
+    }
+}
