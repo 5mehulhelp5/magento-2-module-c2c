@@ -48,22 +48,35 @@ After the installation is complete, navigate to the Stores > Configuration secti
 
 ## User Guide
 
-- Product-Level Configuration
-  - c2c_script: Insert the C2C script at the product level.
-  - Display on Product Detail Page: Set this to Yes or No to display the button on the product detail page.
-  - Button Position: Choose from multiple button positions, such as:
-  - Price (left/right/up/down)
-  - Title (left/right/up/down)
-  - Add to Cart Button (left/right/up/down)
-  - Short Description (left-up/right-up/left-down/right-down)
-  - Product Image (left-up/right-up/left-down/right-down)
+Users can configure the C2C Script and button placement both globally and at the product level. Please note that product-level configurations take precedence over global/store settings.
 
-- Global Configuration
-    -Configure header and footer positions:
-    - Top Header (left/center/right)
-    - Main Header (left/center/right)
-    - Main Footer (left/center/right)
-    - Bottom Footer (left/center/right)
+## Product-Level Configuration
+- C2C Code: Add the C2C script at the product level.
+- Display on Detail Page: Set to "Yes" or "No" to display the button on the product detail page.
+- Display on List Page: Set to "Yes" or "No" to display the button on the product list page.
+- Button Position on Detail Page: Choose the position to display the button on the detail page from the available options.
+- Button Position on List Page: Choose the position to display the button on the list page from the available options.
+
+## Global Configuration 
+
+  ### Global Settings: Configuration for header and footer buttons
+  -  Enable Header Button: Set to "Yes" or "No" to show or hide the button in the header.
+  -  Header Script: Add the C2C script for the header.
+  -  Header Position: Select the desired position for the button in the header from the available options.
+  -  Enable Footer Button: Set to "Yes" or "No" to show or hide the button in the footer.
+  - Footer Script: Add the C2C script for the footer.
+  - Footer Position: Choose the desired position for the button in the footer from the available options.
+
+
+### Product Settings
+  - Display on Detail Page: Enable or disable button display on the product detail page.
+  - Display on List Page: Enable or disable button display on the product list page.
+  - Button Position on Detail Page: Choose the button position on the product detail page.
+  - Button Position on List Page: Choose the button position on the product list page.
+
+### Design Settings
+  - Custom CSS: Apply custom CSS for design adjustments.
+
 
 ### Frontend Behavior
 The button will appear dynamically on product detail pages, product list pages, and checkout pages, based on your configuration.
