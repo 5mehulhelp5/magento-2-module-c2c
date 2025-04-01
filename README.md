@@ -10,8 +10,8 @@ The **ContextToCall_C2C** module integrates a call/email button through the C2C 
 
 ## Features
 
-- Add a dynamic call/email button on the product detail page, product listing page, and checkout page.
-- Customizable button placement for different areas (e.g., price, title, add-to-cart button, etc.).
+- Add a dynamic call/email button on the product detail page, product listing page, and other page.
+- Customizable button placement for different areas (e.g. price, title, add-to-cart button, etc.).
 - Global configuration for header and footer positioning.
 - CSV import/export for bulk configuration management.
 
