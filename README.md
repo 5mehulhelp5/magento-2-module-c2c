@@ -78,4 +78,13 @@ Users can configure the C2C Script and button placement both globally and at the
 
 
 ### Frontend Behavior
-The button will appear dynamically on product detail pages, product list pages, and checkout pages, based on your configuration.
+The button will dynamically appear on the product detail pages, product list pages, and other areas, depending on the configuration settings you choose. You can control its visibility and positioning at both the global and product levels, allowing for flexible customization across different pages. Whether it's displayed on the product detail or list page, or during the checkout process, the button will adapt to your preferences, ensuring a seamless user experience tailored to your setup.
+
+### Import/Export
+Users can leverage native features to easily export and import the C2C script for products. To streamline this process, a new column labeled ‘c2c_code’ has been added to the CSV file.
+- Export: The C2C script is included in the exported CSV file, allowing users to manage the script for each product.
+- Import: The exported CSV file can be imported into the C2C portal. After making the necessary adjustments or additions, the updated file can be imported back into Adobe Commerce to apply the C2C script at the product level.
+
+This process simplifies managing C2C script configurations across products, ensuring consistency and efficiency in handling large numbers of products.
+
+
