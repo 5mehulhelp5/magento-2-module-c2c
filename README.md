@@ -4,7 +4,6 @@
 
 The **ContextToCall_C2C** module integrates a call/email button through the C2C script into your Adobe Commerce (Magento) store. This module allows merchants to add a dynamic button on product pages, list pages, and during checkout based on specific configurations. The module offers flexibility in button placement, supporting both customer engagement via phone or email.
 
-**Version**: 1.1.2  
 **Compatibility**: Adobe Commerce 2.4.7 EE and CE
 
 ---
