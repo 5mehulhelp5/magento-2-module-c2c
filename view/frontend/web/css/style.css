@@ -4,17 +4,33 @@ span.custom-icon-tooltip {
 .c2c-button {
     display: block;
 }
-.c2c-button.top-header.right, .c2c-button.footer.right, .c2c-button.image-right-up, .c2c-button.image-right-down, .c2c-button.short-desc-right-up, .c2c-button.short-desc-right-up, .c2c-button.description-right-up, .c2c-button.description-right-down{
+.c2c-button.top-header.right, .c2c-button.footer.right, .c2c-button.image-right-up, .c2c-button.image-right-down, .c2c-button.description-right-up, .c2c-button.description-right-down{
     float: right;
+}
+.c2c-button.short-desc-right-up, .c2c-button.short-desc-right-down {
+    text-align: right;
+}
+.c2c-button.short-desc-right-left {
+    text-align: left;
+}
+.c2c-button.description-left-up {
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+.c2c-button.description-right-up {
+    text-align: right;
+    float: right;
+    width: 100%;
 }
 .c2c-button.top-header.right {
     margin: -6px 0 -8px 10px;
 }
 .c2c-button.c2c_add_to_cart_down  {
-    margin: -20px 0 15px 0;
+    margin: -20px 0 15px 0; 
 }
 .c2c-button.c2c_add_to_cart_up {
-    margin: -25px 0 0 0;
+    /* margin: -25px 0 0 0; */
 }
 .c2c-button.image-right-down {
     text-align: right;
@@ -44,4 +60,13 @@ span.custom-icon-tooltip {
 }
 .c2c-button.footer.right {
     margin: 0 10px 0 0;
+    text-align: right;
+}
+
+.c2c-button.footer.center {
+    text-align: center;
+}
+
+.c2c-button.footer.left {
+    text-align: left;
 }

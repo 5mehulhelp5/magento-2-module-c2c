@@ -50,7 +50,7 @@ if (!empty($position) && !empty($c2cScript) && !empty($isDisplay)) {
         $shortDesUpClass = '';
         if (in_array('c2c_short_desc_right_up', $position)) {
             $shortDesUpClass = 'short-desc-right-up';
-        } elseif (in_array('c2c_short_desc_up_left_up', $position)) {
+        } elseif (in_array('c2c_short_desc_left_up', $position)) {
             $shortDesUpClass = 'short-desc-left-up';
         }
         if ($shortDesUpClass) { ?>
@@ -76,7 +76,7 @@ if (!empty($position) && !empty($c2cScript) && !empty($isDisplay)) {
         $desUpClass = '';
         if (in_array('c2c_description_right_up', $position)) {
             $desUpClass = 'description-right-up';
-        } elseif (in_array('c2c_description_up_left_up', $position)) {
+        } elseif (in_array('c2c_description_left_up', $position)) {
             $desUpClass = 'description-left-up';
         }
         if ($desUpClass) { ?>
@@ -87,7 +87,7 @@ if (!empty($position) && !empty($c2cScript) && !empty($isDisplay)) {
 
     if ($blockName == 'c2c_description_down') {
         $desDnClass = '';
-        if (in_array('c2c_description_left_up', $position)) {
+        if (in_array('c2c_description_right_down', $position)) {
             $desDnClass = 'description-right-down';
         } elseif (in_array('c2c_description_left_down', $position)) {
             $desDnClass = 'description-left-down';
@@ -100,4 +100,3 @@ if (!empty($position) && !empty($c2cScript) && !empty($isDisplay)) {
 }
 //@codingStandardsIgnoreEnd
 ?>
-
